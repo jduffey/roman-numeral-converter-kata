@@ -9,12 +9,16 @@ public class RomanNumeralConverterTest {
 
 	@Test
 	public void shouldReturnIFor1(){
-		//arrange
 		RomanNumeralConverter testObject = new RomanNumeralConverter();
-		//act
 		String result = testObject.convertArabicToRoman(1);
-		//assert
 		assertEquals("I", result);
+	}
+	
+	@Test
+	public void shouldReturnVFor5(){
+		RomanNumeralConverter testObject = new RomanNumeralConverter();
+		String result = testObject.convertArabicToRoman(5);
+		assertEquals("V", result);
 	}
 
 }
