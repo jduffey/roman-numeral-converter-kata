@@ -12,6 +12,8 @@ public class RomanNumeralConverter {
 			return "X";
 		} else if (input == 50) {
 			return "L";
-		} return "C";
+		} else if (input == 100){
+			return "C";
+		} return "D";
 	}
 }
