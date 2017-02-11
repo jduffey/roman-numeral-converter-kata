@@ -9,8 +9,11 @@ public class RomanNumeralConverter {
 		HashMap<Integer, String> hmap = new HashMap<Integer, String>();
 		
 		hmap.put(1, "I");
+		hmap.put(4, "IV");
 		hmap.put(5, "V");
+		hmap.put(9, "IX");
 		hmap.put(10, "X");
+		hmap.put(40, "XL");
 		hmap.put(50, "L");
 		hmap.put(100, "C");
 		hmap.put(500, "D");

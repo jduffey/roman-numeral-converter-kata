@@ -63,4 +63,39 @@ public class RomanNumeralConverterTest {
 		assertEquals("IV", result);
 	}
 
+	@Test
+	public void shouldReturnIXFor9(){
+		RomanNumeralConverter testObject = new RomanNumeralConverter();
+		String result = testObject.convertArabicToRoman(9);
+		assertEquals("IX", result);
+	}
+	
+	@Test
+	public void shouldReturnXLFor40(){
+		RomanNumeralConverter testObject = new RomanNumeralConverter();
+		String result = testObject.convertArabicToRoman(40);
+		assertEquals("XL", result);
+	}
+	
+	@Test
+	public void shouldReturnXCFor90(){
+		RomanNumeralConverter testObject = new RomanNumeralConverter();
+		String result = testObject.convertArabicToRoman(90);
+		assertEquals("XC", result);
+	}
+	
+	@Test
+	public void shouldReturCDFor400(){
+		RomanNumeralConverter testObject = new RomanNumeralConverter();
+		String result = testObject.convertArabicToRoman(400);
+		assertEquals("CD", result);
+	}
+	
+	@Test
+	public void shouldReturnCMFor900(){
+		RomanNumeralConverter testObject = new RomanNumeralConverter();
+		String result = testObject.convertArabicToRoman(900);
+		assertEquals("CM", result);
+	}
+	
 }
