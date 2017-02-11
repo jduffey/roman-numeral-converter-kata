@@ -20,5 +20,13 @@ public class RomanNumeralConverterTest {
 		String result = testObject.convertArabicToRoman(5);
 		assertEquals("V", result);
 	}
+	
+	@Test
+	public void shouldReturnXFor10(){
+		RomanNumeralConverter testObject = new RomanNumeralConverter();
+		String result = testObject.convertArabicToRoman(10);
+		assertEquals("X", result);
+	}
+	
 
 }
