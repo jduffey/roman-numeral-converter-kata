@@ -112,4 +112,11 @@ public class RomanNumeralConverterTest {
 		assertEquals("III", result);
 	}
 	
+	@Test
+	public void shouldReturnVIFor6(){
+		RomanNumeralConverter testObject = new RomanNumeralConverter();
+		String result = testObject.convertArabicToRoman(6);
+		assertEquals("VI", result);
+	}
+	
 }
