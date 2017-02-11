@@ -5,7 +5,7 @@ import static org.junit.Assert.*;
 
 import org.junit.Before;
 
-public class RomanNumeralConverterTest {
+public class ArabicToRomanTest {
 
 	@Test
 	public void shouldReturnIFor1(){
