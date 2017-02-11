@@ -107,7 +107,6 @@ public class RomanNumeralConverter {
 		hmap.put("D", 500);
 		hmap.put("M", 1000);
 		
-		
 		return hmap.get(input);
 	}
 }

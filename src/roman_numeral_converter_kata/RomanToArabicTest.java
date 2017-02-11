@@ -48,5 +48,10 @@ public class RomanToArabicTest {
 	public void shouldReturn1000ForM(){
 		assertEquals(1000, testObject.convertRomanToArabic("M"));
 	}
+	
+	@Test
+	public void shouldReturn2000ForMM(){
+		assertEquals(2000, testObject.convertRomanToArabic("MM"));
+	}
 
 }
