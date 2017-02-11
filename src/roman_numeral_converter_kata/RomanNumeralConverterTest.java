@@ -1,0 +1,17 @@
+package roman_numeral_converter_kata;
+
+import org.junit.Test;
+import static org.junit.Assert.*;
+
+import org.junit.Before;
+
+public class RomanNumeralConverterTest {
+
+	private RomanNumeralConverter testObject;
+	
+	@Before
+	public void setup() {
+
+	}
+
+}
