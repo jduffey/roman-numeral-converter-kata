@@ -119,4 +119,11 @@ public class RomanNumeralConverterTest {
 		assertEquals("VI", result);
 	}
 	
+	@Test
+	public void shouldReturnMMMCDXLIVFor3444(){
+		RomanNumeralConverter testObject = new RomanNumeralConverter();
+		String result = testObject.convertArabicToRoman(3444);
+		assertEquals("MMMCDXLIV", result);
+	}
+	
 }
