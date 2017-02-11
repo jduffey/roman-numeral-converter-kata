@@ -93,4 +93,10 @@ public class RomanNumeralConverter {
 
 		return output;
 	}
+	
+
+	public Object convertRomanToArabic(String input) {
+
+		return 1;
+	}
 }
