@@ -36,10 +36,17 @@ public class RomanNumeralConverterTest {
 	}
 	
 	@Test
-	public void shouldReturnCFor1000(){
+	public void shouldReturnCFor100(){
 		RomanNumeralConverter testObject = new RomanNumeralConverter();
 		String result = testObject.convertArabicToRoman(100);
 		assertEquals("C", result);
+	}
+	
+	@Test
+	public void shouldReturnDFor500(){
+		RomanNumeralConverter testObject = new RomanNumeralConverter();
+		String result = testObject.convertArabicToRoman(500);
+		assertEquals("D", result);
 	}
 	
 	
