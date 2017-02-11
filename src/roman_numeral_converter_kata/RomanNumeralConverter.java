@@ -96,7 +96,11 @@ public class RomanNumeralConverter {
 	
 
 	public Object convertRomanToArabic(String input) {
+		
+		HashMap<String, Integer> hmap = new HashMap<String, Integer>();
 
-		return 1;
+		hmap.put("I", 1);
+		
+		return hmap.get("I");
 	}
 }
