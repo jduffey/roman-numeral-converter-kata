@@ -21,13 +21,16 @@ public class RomanNumeralConverter {
 		hmap.put(500, "D");
 		hmap.put(900, "CM");
 		hmap.put(1000, "M");
-		
+
 		String output = "";
 
-		if (input == 2){
-			output = hmap.get(1) + hmap.get(1);
+		if (input < 4) {
+
+			for (int i = 1; i <= input; i++) {
+				output += hmap.get(1);
+			}
 			return output;
-		}
+		} else
 
 		return hmap.get(input);
 	}

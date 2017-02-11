@@ -105,4 +105,11 @@ public class RomanNumeralConverterTest {
 		assertEquals("II", result);
 	}
 	
+	@Test
+	public void shouldReturnIIIFor3(){
+		RomanNumeralConverter testObject = new RomanNumeralConverter();
+		String result = testObject.convertArabicToRoman(3);
+		assertEquals("III", result);
+	}
+	
 }
