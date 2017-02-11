@@ -49,6 +49,13 @@ public class RomanNumeralConverterTest {
 		assertEquals("D", result);
 	}
 	
+	@Test
+	public void shouldReturnMFor1000(){
+		RomanNumeralConverter testObject = new RomanNumeralConverter();
+		String result = testObject.convertArabicToRoman(1000);
+		assertEquals("M", result);
+	}
+	
 	
 
 }
