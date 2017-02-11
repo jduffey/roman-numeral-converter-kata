@@ -5,9 +5,9 @@ import java.util.HashMap;
 public class RomanNumeralConverter {
 
 	public String convertArabicToRoman(int input) {
-		
+
 		HashMap<Integer, String> hmap = new HashMap<Integer, String>();
-		
+
 		hmap.put(1, "I");
 		hmap.put(4, "IV");
 		hmap.put(5, "V");
@@ -21,6 +21,13 @@ public class RomanNumeralConverter {
 		hmap.put(500, "D");
 		hmap.put(900, "CM");
 		hmap.put(1000, "M");
+		
+		String output = "";
+
+		if (input == 2){
+			output = hmap.get(1) + hmap.get(1);
+			return output;
+		}
 
 		return hmap.get(input);
 	}

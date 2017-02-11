@@ -98,4 +98,11 @@ public class RomanNumeralConverterTest {
 		assertEquals("CM", result);
 	}
 	
+	@Test
+	public void shouldReturnIIFor2(){
+		RomanNumeralConverter testObject = new RomanNumeralConverter();
+		String result = testObject.convertArabicToRoman(2);
+		assertEquals("II", result);
+	}
+	
 }
