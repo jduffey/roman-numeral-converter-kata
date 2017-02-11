@@ -56,6 +56,11 @@ public class RomanNumeralConverterTest {
 		assertEquals("M", result);
 	}
 	
-	
+	@Test
+	public void shouldReturnIVFor4(){
+		RomanNumeralConverter testObject = new RomanNumeralConverter();
+		String result = testObject.convertArabicToRoman(4);
+		assertEquals("IV", result);
+	}
 
 }
