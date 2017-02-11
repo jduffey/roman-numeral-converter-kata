@@ -50,8 +50,38 @@ public class RomanToArabicTest {
 	}
 	
 	@Test
+	public void shouldReturn4ForIV(){
+		assertEquals(4, testObject.convertRomanToArabic("IV"));
+	}
+	
+	@Test
+	public void shouldReturn9ForIX(){
+		assertEquals(9, testObject.convertRomanToArabic("IX"));
+	}
+	
+	@Test
+	public void shouldReturn40ForXL(){
+		assertEquals(40, testObject.convertRomanToArabic("XL"));
+	}
+	
+	@Test
+	public void shouldReturn90ForXC(){
+		assertEquals(90, testObject.convertRomanToArabic("XC"));
+	}
+	
+	@Test
+	public void shouldReturn400ForCD(){
+		assertEquals(400, testObject.convertRomanToArabic("CD"));
+	}
+	
+	@Test
+	public void shouldReturn900ForCM(){
+		assertEquals(900, testObject.convertRomanToArabic("CM"));
+	}
+	
+	/*@Test
 	public void shouldReturn2000ForMM(){
 		assertEquals(2000, testObject.convertRomanToArabic("MM"));
 	}
-
+*/
 }

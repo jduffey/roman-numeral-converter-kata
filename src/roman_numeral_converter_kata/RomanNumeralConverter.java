@@ -100,12 +100,25 @@ public class RomanNumeralConverter {
 		HashMap<String, Integer> hmap = new HashMap<String, Integer>();
 
 		hmap.put("I", 1);
+		hmap.put("IV", 4);
 		hmap.put("V", 5);
+		hmap.put("IX", 9);
 		hmap.put("X", 10);
+		hmap.put("XL", 40);
 		hmap.put("L", 50);
+		hmap.put("XC", 90);
 		hmap.put("C", 100);
+		hmap.put("CD", 400);
 		hmap.put("D", 500);
+		hmap.put("CM", 900);
 		hmap.put("M", 1000);
+		
+		String stringToParse = input;
+		int arabicValue = 0;
+		
+		
+		
+		
 		
 		return hmap.get(input);
 	}
