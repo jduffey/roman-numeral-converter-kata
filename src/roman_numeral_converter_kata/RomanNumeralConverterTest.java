@@ -7,11 +7,13 @@ import org.junit.Before;
 
 public class RomanNumeralConverterTest {
 
-	private RomanNumeralConverter testObject;
-	
-	@Before
-	public void setup() {
-
+	@Test
+	public void shouldReturnIFor1(){
+		//arrange
+		RomanNumeralConverter testObject = new RomanNumeralConverter();
+		//act
+		String result = testObject.convertArabicToRoman(1);
+		//assert
 	}
 
 }
