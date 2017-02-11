@@ -100,7 +100,14 @@ public class RomanNumeralConverter {
 		HashMap<String, Integer> hmap = new HashMap<String, Integer>();
 
 		hmap.put("I", 1);
+		hmap.put("V", 5);
+		hmap.put("X", 10);
+		hmap.put("L", 50);
+		hmap.put("C", 100);
+		hmap.put("D", 500);
+		hmap.put("M", 1000);
 		
-		return hmap.get("I");
+		
+		return hmap.get(input);
 	}
 }
