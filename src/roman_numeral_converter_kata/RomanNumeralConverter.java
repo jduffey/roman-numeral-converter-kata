@@ -8,7 +8,10 @@ public class RomanNumeralConverter {
 			return "I";
 		} else if (input == 5) {
 			return "V";
-		}
-		return "X";
+		} else if (input == 10) {
+			return "X";
+		} else if (input == 50) {
+			return "L";
+		} return "C";
 	}
 }

@@ -28,5 +28,20 @@ public class RomanNumeralConverterTest {
 		assertEquals("X", result);
 	}
 	
+	@Test
+	public void shouldReturnLFor50(){
+		RomanNumeralConverter testObject = new RomanNumeralConverter();
+		String result = testObject.convertArabicToRoman(50);
+		assertEquals("L", result);
+	}
+	
+	@Test
+	public void shouldReturnCFor1000(){
+		RomanNumeralConverter testObject = new RomanNumeralConverter();
+		String result = testObject.convertArabicToRoman(100);
+		assertEquals("C", result);
+	}
+	
+	
 
 }
