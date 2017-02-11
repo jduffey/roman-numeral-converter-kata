@@ -14,7 +14,7 @@ public class RomanNumeralConverterTest {
 		//act
 		String result = testObject.convertArabicToRoman(1);
 		//assert
-		assertEquals(1, result);
+		assertEquals("I", result);
 	}
 
 }
