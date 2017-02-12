@@ -135,13 +135,7 @@ public class RomanNumeralConverter {
 
 		}
 
-		if (stringToParse.length() == 1) { // This if conditional was the last
-											// part I coded. Code returned an
-											// error if it tried to parse the
-											// remainder of the string if there
-											// wasn't any string left, e.g. if
-											// the last thing to have been
-											// parsed was IX.
+		if (stringToParse.length() == 1) { 
 
 			arabicValue += hmap.get(stringToParse);
 
