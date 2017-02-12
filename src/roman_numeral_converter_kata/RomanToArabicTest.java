@@ -79,9 +79,19 @@ public class RomanToArabicTest {
 		assertEquals(900, testObject.convertRomanToArabic("CM"));
 	}
 	
-	/*@Test
-	public void shouldReturn2000ForMM(){
-		assertEquals(2000, testObject.convertRomanToArabic("MM"));
+	@Test
+	public void shouldReturn3000ForMMM(){
+		assertEquals(3000, testObject.convertRomanToArabic("MMM"));
 	}
-*/
+	
+	@Test
+	public void shouldReturn300ForCCC(){
+		assertEquals(300, testObject.convertRomanToArabic("CCC"));
+	}
+	
+	@Test
+	public void shouldReturn30ForXXX(){
+		assertEquals(30, testObject.convertRomanToArabic("XXX"));
+	}
+
 }

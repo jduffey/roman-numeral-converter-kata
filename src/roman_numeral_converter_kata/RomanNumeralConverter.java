@@ -93,10 +93,9 @@ public class RomanNumeralConverter {
 
 		return output;
 	}
-	
 
-	public Object convertRomanToArabic(String input) {
-		
+	public int convertRomanToArabic(String input) {
+
 		HashMap<String, Integer> hmap = new HashMap<String, Integer>();
 
 		hmap.put("I", 1);
@@ -112,14 +111,24 @@ public class RomanNumeralConverter {
 		hmap.put("D", 500);
 		hmap.put("CM", 900);
 		hmap.put("M", 1000);
-		
+
 		String stringToParse = input;
 		int arabicValue = 0;
-		
-		
-		
-		
-		
-		return hmap.get(input);
+
+		for (stringToParse.length() > 1) {
+
+			while (stringToParse.substring(0, 1).equalsIgnoreCase("M")) {
+				
+				while(stringToParse.length() > 1){
+					
+					stringToParse = stringToParse.substring(1);
+				}
+				
+				arabicValue += 1000;
+			}
+
+			return arabicValue;
+		}
+		return hmap.get(stringToParse);
 	}
 }
