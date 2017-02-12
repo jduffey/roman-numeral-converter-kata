@@ -93,5 +93,10 @@ public class RomanToArabicTest {
 	public void shouldReturn30ForXXX(){
 		assertEquals(30, testObject.convertRomanToArabic("XXX"));
 	}
+	
+	@Test
+	public void shouldReturn3444ForMMMCDXLIV(){
+		assertEquals(3444, testObject.convertRomanToArabic("MMMCDXLIV"));
+	}
 
 }

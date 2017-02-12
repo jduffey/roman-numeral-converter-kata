@@ -115,20 +115,38 @@ public class RomanNumeralConverter {
 		String stringToParse = input;
 		int arabicValue = 0;
 
-		for (stringToParse.length() > 1) {
+		while (stringToParse.length() > 1) {
 
-			while (stringToParse.substring(0, 1).equalsIgnoreCase("M")) {
-				
-				while(stringToParse.length() > 1){
-					
-					stringToParse = stringToParse.substring(1);
-				}
-				
-				arabicValue += 1000;
+			String targetLetter = String.valueOf(stringToParse.charAt(0));
+
+			String nextLetter = String.valueOf(stringToParse.charAt(1));
+
+			if (hmap.get(nextLetter) > hmap.get(targetLetter)) {
+
+				String comboLetter = targetLetter + nextLetter;
+				arabicValue += hmap.get(comboLetter);
+				stringToParse = stringToParse.substring(2);
+
+			} else {
+
+				arabicValue += hmap.get(targetLetter);
+				stringToParse = stringToParse.substring(1);
 			}
 
-			return arabicValue;
 		}
-		return hmap.get(stringToParse);
+
+		if (stringToParse.length() == 1) { // This if conditional was the last
+											// part I coded. Code returned an
+											// error if it tried to parse the
+											// remainder of the string if there
+											// wasn't any string left, e.g. if
+											// the last thing to have been
+											// parsed was IX.
+
+			arabicValue += hmap.get(stringToParse);
+
+		}
+		
+		return arabicValue;
 	}
 }
