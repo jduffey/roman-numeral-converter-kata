@@ -125,22 +125,22 @@ public class RomanNumeralConverter {
 
 				String comboLetter = targetLetter + nextLetter;
 				arabicValue += hmap.get(comboLetter);
-				stringToParse = stringToParse.substring(2);
+				stringToParse = stringToParse.substring(2); //Ask Mike about this.
 
 			} else {
 
 				arabicValue += hmap.get(targetLetter);
-				stringToParse = stringToParse.substring(1);
+				stringToParse = stringToParse.substring(1); //Is this line needed?
 			}
 
 		}
 
-		if (stringToParse.length() == 1) { 
+		if (stringToParse.length() == 1) {
 
 			arabicValue += hmap.get(stringToParse);
 
 		}
-		
+
 		return arabicValue;
 	}
 }
