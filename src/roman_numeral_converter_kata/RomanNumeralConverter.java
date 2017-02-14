@@ -24,7 +24,7 @@ public class RomanNumeralConverter {
 		hmap.put(900, "CM");
 		hmap.put(1000, "M");
 
-		String output = "";
+		String romanStringOutput = "";
 
 		for (int i = 3; i >= 0; i--) {
 
@@ -39,7 +39,7 @@ public class RomanNumeralConverter {
 							* ((5.0 / 6.0) * Math.pow(j, 3) - 6 * Math.pow(j, 2) + (91.0 / 6.0) * (j) - 9.0);
 					int romanBaseInt = (int) romanBase;
 					while (counter >= romanBaseInt) {
-						output += hmap.get(romanBaseInt);
+						romanStringOutput += hmap.get(romanBaseInt);
 						counter -= romanBaseInt;
 					}
 					break;
@@ -49,79 +49,14 @@ public class RomanNumeralConverter {
 
 					int romanBaseInt = (int) romanBase;
 					while (counter >= romanBaseInt) {
-						output += hmap.get(romanBaseInt);
+						romanStringOutput += hmap.get(romanBaseInt);
 						counter -= romanBaseInt;
 					}
 				}
 			}
 		}
 
-//		while (counter >= 1000) {
-//			output += hmap.get(1000);
-//			counter -= 1000;
-//		}
-//
-//		while (counter >= 900) {
-//			output += hmap.get(900);
-//			counter -= 900;
-//		}
-//
-//		while (counter >= 500) {
-//			output += hmap.get(500);
-//			counter -= 500;
-//		}
-//
-//		while (counter >= 400) {
-//			output += hmap.get(400);
-//			counter -= 400;
-//		}
-//
-//		while (counter >= 100) {
-//			output += hmap.get(100);
-//			counter -= 100;
-//		}
-//
-//		while (counter >= 90) {
-//			output += hmap.get(90);
-//			counter -= 90;
-//		}
-//
-//		while (counter >= 50) {
-//			output += hmap.get(50);
-//			counter -= 50;
-//		}
-//
-//		while (counter >= 40) {
-//			output += hmap.get(40);
-//			counter -= 40;
-//		}
-//
-//		while (counter >= 10) {
-//			output += hmap.get(10);
-//			counter -= 10;
-//		}
-//
-//		while (counter >= 9) {
-//			output += hmap.get(9);
-//			counter -= 9;
-//		}
-//
-//		while (counter >= 5) {
-//			output += hmap.get(5);
-//			counter -= 5;
-//		}
-//
-//		while (counter >= 4) {
-//			output += hmap.get(4);
-//			counter -= 4;
-//		}
-//
-//		while (counter >= 1) {
-//			output += hmap.get(1);
-//			counter -= 1;
-//		}
-
-		return output;
+		return romanStringOutput;
 	}
 
 	public int convertRomanToArabic(String input) {
