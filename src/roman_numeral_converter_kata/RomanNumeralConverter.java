@@ -33,20 +33,15 @@ public class RomanNumeralConverter {
 			for (int j = 4; j >= 1; j--) {
 
 				if (i == 3) {
-					exp = 3;
-					j = 1;
-					double romanBase = Math.pow(10, exp)
-							* ((5.0 / 6.0) * Math.pow(j, 3) - 6 * Math.pow(j, 2) + (91.0 / 6.0) * (j) - 9.0);
+					double romanBase = sequenceGenerator(3, 1);
 					int romanBaseInt = (int) romanBase;
 					while (counter >= romanBaseInt) {
 						romanStringOutput += hmap.get(romanBaseInt);
 						counter -= romanBaseInt;
 					}
-					break;
-				} else {
-					double romanBase = Math.pow(10, exp)
-							* ((5.0 / 6.0) * Math.pow(j, 3) - 6 * Math.pow(j, 2) + (91.0 / 6.0) * (j) - 9.0);
 
+				} else {
+					double romanBase = sequenceGenerator(exp, j);
 					int romanBaseInt = (int) romanBase;
 					while (counter >= romanBaseInt) {
 						romanStringOutput += hmap.get(romanBaseInt);
@@ -57,6 +52,12 @@ public class RomanNumeralConverter {
 		}
 
 		return romanStringOutput;
+	}
+
+	private double sequenceGenerator(int exp, int j) {
+		double romanBase = Math.pow(10, exp)
+				* ((5.0 / 6.0) * Math.pow(j, 3) - 6 * Math.pow(j, 2) + (91.0 / 6.0) * (j) - 9.0);
+		return romanBase;
 	}
 
 	public int convertRomanToArabic(String input) {
